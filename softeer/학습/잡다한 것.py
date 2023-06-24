@@ -18,4 +18,6 @@ score=sorted(score,reverse=True)      # 내림차순으로 정렬
 lec=sorted(lec,key=lambda x : x[1])   # 리스트가 있을 때 [0,1] 1번째 요소를 바탕으로 sorting
 lec=sorted(lec,key=lambda x: x[1],reverse=True)
 
+# 3. 반올림 및 소수점 맞추기
 
+print(f"{total:.2f}") # 이 형식대로 하면 자릿수조절(소수점 2번째 자리까지)과 반올림을 한번에 할 수 있다.
