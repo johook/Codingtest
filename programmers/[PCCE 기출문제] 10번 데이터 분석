@@ -1,0 +1,55 @@
+def solution(data, ext, val_ext, sort_by):
+    answer = []
+    if ext =="code":
+        for i in data:
+            if i[0] < val_ext:
+                answer.append(i)
+        if sort_by =="code":
+            sorted_answer = sorted(answer, key=lambda x: x[0])
+        elif sort_by == "date":
+            sorted_answer = sorted(answer, key=lambda x: x[1])
+        elif sort_by == "maximum":
+            sorted_answer = sorted(answer, key=lambda x: x[2])
+        else:
+            sorted_answer = sorted(answer, key=lambda x: x[3])
+    
+    elif ext == "date":
+        for i in data:
+            if i[1] < val_ext:
+                answer.append(i)
+        if sort_by =="code":
+            sorted_answer = sorted(answer, key=lambda x: x[0])
+        elif sort_by == "date":
+            sorted_answer = sorted(answer, key=lambda x: x[1])
+        elif sort_by == "maximum":
+            sorted_answer = sorted(answer, key=lambda x: x[2])
+        else:
+            sorted_answer = sorted(answer, key=lambda x: x[3])
+            
+    elif ext == "maximum":
+        for i in data:
+            if i[2] < val_ext:
+                answer.append(i)
+        if sort_by =="code":
+            sorted_answer = sorted(answer, key=lambda x: x[0])
+        elif sort_by == "date":
+            sorted_answer = sorted(answer, key=lambda x: x[1])
+        elif sort_by == "maximum":
+            sorted_answer = sorted(answer, key=lambda x: x[2])
+        else:
+            sorted_answer = sorted(answer, key=lambda x: x[3])
+            
+    else: 
+        for i in data:
+            if i[3] < val_ext:
+                answer.append(i)
+        if sort_by =="code":
+            sorted_answer = sorted(answer, key=lambda x: x[0])
+        elif sort_by == "date":
+            sorted_answer = sorted(answer, key=lambda x: x[1])
+        elif sort_by == "maximum":
+            sorted_answer = sorted(answer, key=lambda x: x[2])
+        else:
+            sorted_answer = sorted(answer, key=lambda x: x[3])
+
+    return sorted_answer
